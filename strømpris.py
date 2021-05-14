@@ -12,7 +12,7 @@ import pandas as pd
 import numpy as np
 
 
-
+# Token til CoT
 token_1="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1OTIyIn0.-QervryV2oRrnpeFFmbx7RGGSLwKmIWhKN3X1mAXCy0"
 token_2="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1OTY2In0.jpA9BqhHik3DZACJT-aMcrSunlvQeyid9snyh6WxPTA"
 token_3="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1MTkwIn0.-xszm_AFkXDZTnevdjFy9Ivvozdp02EwBSulSWwiOHg"
@@ -23,7 +23,7 @@ def startup():
     # lager ein dataframe av strom.csv
     df_start=pd.read_csv("strom.csv")
     
-    # Hvis dataframen er tom, setter wt,pris,total_strøm_produsert=0,0,0
+    # Hvis dataframen er tom, setter kwt,pris,total_strøm_produsert=0,0,0, Som er variabler som brukt senerei programmet.
     if len(df_start.index)==0:
         return 0,0,0
     
